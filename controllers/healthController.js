@@ -6,7 +6,7 @@ export const HealthController = {
       status: "ok",
       uptime: process.uptime(),
       timestamp: new Date().toISOString(),
-      database: "unknown"
+      database: "Neon"
     };
 
     try {

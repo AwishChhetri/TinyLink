@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(process.cwd(), "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(process.cwd(), "views"));
-
+const PORT=3003
 // main routes
 app.get("/", (req, res) => {
   res.redirect("/api/links"); 
@@ -24,4 +24,4 @@ app.use("/healthz", healthRouter);
 app.use("/code",singlecodeRouter)
 app.use("/", redirectRouter);
 
-app.listen(3000, () => console.log("Running → http://localhost:3000"));
+app.listen(PORT, () => console.log("Running → http://localhost:3003"));

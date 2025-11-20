@@ -5,7 +5,7 @@ import cors from "cors";
 import linksRouter from "./routes/links.js";
 import redirectRouter from "./routes/redirect.js";
 import healthRouter from "./routes/health.js";
-import singlecodeRouter from "./routes/singlecode.js";
+import singlecodeRouter from "./routes/singleCode.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -14,7 +14,7 @@ app.use(express.static(path.join(process.cwd(), "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(process.cwd(), "views"));
 
-
+// main routes
 app.get("/", (req, res) => {
   res.redirect("/api/links"); 
 });

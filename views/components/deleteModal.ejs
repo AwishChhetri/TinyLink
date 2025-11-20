@@ -1,0 +1,17 @@
+<div id="deleteModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+  <div class="modal-open bg-slate-800 border border-slate-700 rounded-lg max-w-sm w-full p-6">
+
+    <h3 class="text-lg font-semibold mb-2">Delete Link?</h3>
+    <p class="text-sm text-slate-300 mb-6">This action cannot be undone.</p>
+
+    <div class="flex gap-3">
+      <button onclick="closeDeleteModal()" class="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg">
+        Cancel
+      </button>
+      <button id="confirmDeleteBtn" class="flex-1 px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg">
+        Delete
+      </button>
+    </div>
+
+  </div>
+</div>

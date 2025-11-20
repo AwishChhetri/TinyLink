@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TinyLink - URL Shortener</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      * { font-family: 'Inter', sans-serif; }
+      @keyframes slideIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+      .modal-open { animation: slideIn 0.2s ease-out; }
+      .sortable { cursor: pointer; }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 min-h-screen">
+
+    <header class="border-b border-slate-700/50 bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">✨ TinyLink</h1>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+
+      <div id="alertBox"></div>
+
+      <!-- Create Form -->
+      <%- include("components/form") %>
+
+      <!-- Table Component -->
+      <%- include("components/table", { links }) %>
+
+      <!-- Delete Modal -->
+      <%- include("components/deleteModal") %>
+
+    </main>
+
+    <script src="/scripts/index.js"></script>
+
+  </body>
+</html>

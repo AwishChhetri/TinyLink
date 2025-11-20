@@ -1,0 +1,34 @@
+<div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 sm:p-6 mb-6 backdrop-blur-sm">
+  <h2 class="text-lg font-semibold mb-3">Create Short Link</h2>
+
+  <form id="linkForm" class="space-y-4">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium mb-1">Long URL *</label>
+        <input id="urlInput"
+          type="text"
+          placeholder="https://example.com"
+          class="w-full px-3 py-2 bg-slate-700/50 border border-slate-600 text-sm rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+        <p id="urlError" class="text-red-400 text-xs hidden mt-1">❌ Enter a valid URL</p>
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1">Custom Code (optional)</label>
+        <input id="codeInput"
+          type="text"
+          placeholder="docs123"
+          class="w-full px-3 py-2 bg-slate-700/50 border border-slate-600 text-sm rounded-lg
+                 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+      </div>
+    </div>
+    <button id="submitBtn"
+      class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium py-2 rounded-lg
+             hover:from-blue-600 hover:to-cyan-600 transition disabled:opacity-50">
+      Shorten URL
+    </button>
+
+  </form>
+</div>

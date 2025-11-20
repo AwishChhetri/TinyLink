@@ -5,7 +5,7 @@ import cors from "cors";
 import linksRouter from "./routes/links.js";
 import redirectRouter from "./routes/redirect.js";
 import healthRouter from "./routes/health.js";
-import singlecodeRouter from "./routes/singleCode.js";
+import singlecodeRouter from "./routes/singlecode.js";
 const app = express();
 app.use(cors());
 app.use(express.json());

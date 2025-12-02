@@ -16,7 +16,8 @@ app.set("views", path.join(process.cwd(), "views"));
 const PORT=3003
 // main routes
 app.get("/", (req, res) => {
-  res.redirect("/api/links"); 
+  // res.redirect("/api/links"); 
+  res.send("senha tamang")
 });
 
 app.use("/api/links", linksRouter);

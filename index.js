@@ -17,6 +17,7 @@ const PORT=3003
 // main routes
 app.get("/", (req, res) => {
   // res.redirect("/api/links"); 
+  console.log("thi si sbaouttt")
   res.send("senha tamang")
 });
 
